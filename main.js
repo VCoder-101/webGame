@@ -85,7 +85,7 @@ let autopilotEndTime = 0; // когда автопилот отключится
 
 
 
-coins+=10000
+coins+=20
 
 
 
