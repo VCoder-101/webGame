@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Космический шутер</title>
+  <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="images/icon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!-- Левая панель (15%) -->
+  <div id="leftPanel">
+    <h2>Управление</h2>
+    <img src="images/WSAD.png" alt="WSAD" class="control-img">
+    <h3 class="autopilot-title">Автопилот</h3>
+    <img src="images/Auto_P.png" alt="Autopilot" class="control-img">
+  <h3 class="shooting-title">Стрельба</h3>
+
+  <p class="shooting-info">
+    Выстрел — Левая кнопка мыши<br>
+    Супер выстрел — Правая кнопка мыши
+  </p>
+  </div>
+
+  <!-- Канвас (70%) -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Правая панель (15%) -->
+  <div id="sidebar">
+    <div id="tabs">
+      <button onclick="switchTab('upgrade')">Прокачка</button>
+      <button onclick="switchTab('skills')">Навыки</button>
+    </div>
+    <div id="tab-content">
+      <div id="upgrade" class="tab active">
+        <p class="tab-title">Уровень <span id="ship-level">1</span></p>
+        
+        <div class="upgrade-item">
+          <img src="upgrade_speed.png" alt="speed" class="icon">
+          <div class="upgrade-info">
+            <p>Скорость (<span id="speedLevelText">1</span>/3)</p>
+            <button id="upgradeSpeedBtn" onclick="upgradeSpeed()">Купить</button>
+          </div>
+        </div>
+
+        <div class="upgrade-item">
+          <img src="upgrade_fire.png" alt="fire" class="icon">
+          <div class="upgrade-info">
+            <p>Скорострельность (<span id="fireLevelText">1</span>/3)</p>
+            <button id="upgradeFireBtn" onclick="upgradeFire()">Купить</button>
+          </div>
+        </div>
+        
+        <div class="upgrade-item">
+          <img src="upgrade_ship.png" alt="ship" class="icon">
+          <div class="upgrade-info">
+            <p>Добавить 2 пушки</p>
+            <button onclick="addCannons()">Купить за 50 🪙</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="skills" class="tab">
+        <p class="tab-title">Навыки пока недоступны</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
